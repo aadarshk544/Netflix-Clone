@@ -33,13 +33,18 @@ Netflix-Clone/
 ## 📷 Screenshots
 
 ### 🖥️ Desktop View
-<img width="1919" height="972" alt="image" src="https://github.com/user-attachments/assets/3247e0f1-6119-4dab-8b38-a535f363a3d6" />
-<img width="1901" height="961" alt="image" src="https://github.com/user-attachments/assets/72201200-07cc-4c0e-9bb7-f809507f4129" />
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/3247e0f1-6119-4dab-8b38-a535f363a3d6" width="700">
+  <br><br>
+  <img src="https://github.com/user-attachments/assets/72201200-07cc-4c0e-9bb7-f809507f4129" width="700">
+</p>
 
 ### 📱 Mobile View
-<img width="828" height="1792" alt="AdobeExpressPhotos_e8bebece4fff43aab76973c9d7ba8c68_CopyEdited" src="https://github.com/user-attachments/assets/b047d327-facc-423e-89bc-9d7e4e543165" />
-<img width="828" height="1792" alt="AdobeExpressPhotos_b354e8a9f7ce4363932df5e0e2110ba3_CopyEdited" src="https://github.com/user-attachments/assets/0841c664-7757-46d9-a22b-d042b50455b4" />
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/b047d327-facc-423e-89bc-9d7e4e543165" width="250">
+</p>
 
 ## 💻 How to Run
 
