@@ -460,16 +460,40 @@ nav button {
         gap:18px;
         font-size:15px;
     }
+
+    .email-section{
+        padding: 0 20px;
+    }
+
+    .email-text{
+        margin-top: 40px;
+        padding: 0 10px;
+    }
     .email-form{
+        width: 100%;
+        display: flex;
+        align-items: center;
         flex-direction: column;
         gap: 15px;
     }
 
-    .emailinput,
-    .button{
-        width: 100%;
-        max-width: 320px;
+    .emailinput{
+        width: 75%;
+        max-width: 340px;
+        height: 52px;
         margin: 0;
+        margin-top: 15px;
+        box-sizing: border-box;
+    }
+    .button{
+        width: 50%;
+        max-width: 340px;
+        height:45px;
+        margin: 0;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
 }
