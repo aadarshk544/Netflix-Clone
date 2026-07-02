@@ -1,6 +1,10 @@
 # 🎬 Netflix Clone
 
-A responsive Netflix landing page built using **HTML** and **CSS**, inspired by the official Netflix homepage. This project focuses on creating a clean, modern, and responsive user interface using only HTML and CSS.
+A responsive Netflix landing page built using **HTML** and **CSS**, inspired by the official Netflix homepage. This project focuses on creating a clean, modern, and responsive user interface.
+
+## 🌐 Live Demo
+
+🔗 **Live Website:** [Netflix Clone](https://netflix-clone-ten-rose-42.vercel.app)
 
 ## 🚀 Features
 
@@ -18,6 +22,8 @@ A responsive Netflix landing page built using **HTML** and **CSS**, inspired by 
 - CSS3
 - Flexbox
 - Responsive Design
+- Git & GitHub
+- Vercel
 - Google Chrome DevTools
 
 ## 📁 Project Structure
@@ -49,9 +55,11 @@ Netflix-Clone/
 ## 💻 How to Run
 
 1. Clone the repository:
-   ```bash
-   git clone https://github.com/aadarshk544/Netflix-Clone.git
-   ```
+
+```bash
+git clone https://github.com/aadarshk544/Netflix-Clone.git
+```
+
 2. Open the project folder.
 3. Open `index.html` in your browser.
 
@@ -59,11 +67,11 @@ Netflix-Clone/
 
 - Add JavaScript functionality
 - Implement an interactive FAQ accordion
-- Enhance animations and accessibility
-- Deploy the project
+- Improve animations and accessibility
+- Enhance performance
 
 ## 👨‍💻 Author
 
 **Aadarsh**
 
-GitHub: **[@aadarshk544](https://github.com/aadarshk544)**
+GitHub: [@aadarshk544](https://github.com/aadarshk544)
