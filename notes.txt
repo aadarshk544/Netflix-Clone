@@ -1,0 +1,477 @@
+Including style:
+1. Inline = <h1 style="color:red"> Apna clg </h1> ........this we write together with header
+
+2.<style> tag  we write tis in head
+    <style> 
+        h1{
+            color=red;
+        }
+    </style>
+
+3. using ext stylesheet .css file  add this file in header
+<link rel="spreadsheet" href="file path" >
+
+if we use both inline and ext spreadsheet for a single element....then priority to inline is given
+
+use coolors website to select color palete instead of using random colors while making projects
+
+
+//////Selectors 
+1. Universal Selector =   *{}
+2. element Selector= h1{}
+3. id selector=  #myid={} .........dont use same id  for multiple elements
+4. class selector =  .myclass1{}  ...............for multiple elements to give same style use class
+
+
+text-align : right/left/centre;
+text-decoration : underlin/overline/linethrough/none;
+font-weight:normal/bold/bolder/lighter; or 100-900
+font-family:   ;
+unit is pixel(px)
+96px=1inch=2.54cm
+
+font-size:20px;
+line-height:2px;  space bween two lines of para
+text-transform: uppercase/lowercase/capitalize(first letter capital) /none;
+
+
+
+box model in css ->
+height |  width  | border  |  padding   |   margin
+
+border = 1. border-width:
+         2. border-style: solid/dotted/dashed
+         3. border-color:
+         
+
+         we can write in shortcut which is called shorthand
+         border=width style color;    e.g border=5px dotted green;
+
+         border-radius=5px;  or =50%; or we can write values in percentage  (border radius=50% gives a circle)
+
+
+         if we just have to add properties to border top or down we can write   border-top:2px solid black
+         
+padding= space between content and border
+         1.padding-left:5px;
+         2.padding-right:
+         3.padding-top:
+         4.padding-bottom:
+
+         iska shorthand
+         1.  padding:50px;   it means padding of 50px from all sides
+         2.  padding:1px 2px 3px 4px;   it means top|right|bottom|left (clockwise)
+
+margin = space between two contents or borders of two content
+         1.margin-left:2px;  waise hi right ,top,bottom
+
+         shorthand  
+         1.margin:50px;   it means margin of 50px from all sides
+         2.  margin:1px 2px 3px 4px;   it means top|right|bottom|left (clockwise)
+
+
+
+Display Property   display:inline/block/inline-block/none;
+        
+        1. inline= takes ony the space req by ele...no padding/margin space  e.eg span, buttom, search, anchor tag
+        2. block= takes full space avaible in width.......e.g  div ......if for a div we write   display:inline; then it will act as inline rather than block 
+        3. inline-block= similar to inline but we can set margin and padding
+        4.none= to remove element from doc flow.....no display of that
+
+
+        5.visibility=hidden;
+
+        *****the diff bween display:none; and visibility:hidden;  is that display also don't reserve space for that ele after setting none and visibility=hidden just hides it but space is still reserved fot that***
+
+
+Relative units
+1. %.....it is in relative to its parent cell...
+2. em = it is for font size....if font size of child cell is 0.5em then its font will be half the size of parent cell font size
+    if we use width=5em then the width size will be 5*font size of the same cell
+3. rem =it will make the font size of cell to rem times the font size of root i.e <body> .....5rem.....font size of cell= 5 timmes the font size of root ele
+    also for width
+
+Position property of css
+
+CSS Position Types
+1. static (default)
+   - Normal document flow.
+   - top, right, bottom, left, z-index do not work.
+
+2. relative
+   - Positioned relative to its own original position.
+   - top, right, bottom, left, z-index work.
+   - Space is still reserved in the layout.
+
+3. absolute
+   - Positioned relative to the nearest positioned (non-static) ancestor.
+   - Removed from normal document flow.
+   - If no positioned ancestor exists, it uses the viewport/body.
+
+4. fixed
+   - Positioned relative to the browser viewport.
+   - Stays in the same place while scrolling.
+   - Removed from normal document flow.
+
+5. sticky
+   - Acts like relative until a scroll threshold is reached.
+   - Then behaves like fixed within its parent container.
+   - Used for sticky headers and navigation bars.
+
+Key Point:
+static → default
+relative → moves from its own position
+absolute → nearest non-static parent
+fixed → viewport/browser
+sticky → changes with scrolling
+
+z-index= overlapping ele with a larger z-index are over the ele with lower z-index.....by default all have z-index=0
+        z-index=+ve higher/over other ele.....if -ve then under greater z index ele....anf if both 0 then the one created first is under
+
+
+background-image: "url";
+but while setting bg img always do set its size to i.e.   background-size:cover/contain/auto; ...cover=perfectly fits in the area...contain=priority that the img will be seen clealry and it also fits in the area
+and if img repeating due to setting it contain then use....  background-repeat:no-repeat;   by default is always  auto 
+
+
+
+FLEXBOX (Flexible Box Layout)
+
+Definition:
+Flexbox is a one-dimensional CSS layout model used to arrange items in rows or columns.
+
+Syntax:
+.container{
+    display: flex;
+}
+
+Basic Terms:
+• Flex Container → Parent element with display:flex.
+• Flex Item → Direct child of flex container.
+
+Axes:
+• Main Axis → Direction in which items are placed. horizontal
+• Cross Axis → Perpendicular to main axis.  vertical
+
+flex-direction:
+• row (default)  l to r
+• row-reverse     r to l
+• column    top to bottom
+• column-reverse   bottom to top
+
+ the direction in flexdirection(verticsl/horizontal) is the directoin of main axis and its perpendicular is cross axis.....(not necesaary that main axis is always horizontal one)
+justify content works for main axis and align items for cross axis
+
+
+
+Flex Container Properties:
+1. justify-content
+   Aligns items along the main axis.
+   Values:
+   • flex-start
+   • flex-end
+   • center
+   • space-between
+   • space-around
+   • space-evenly
+
+2. align-items
+   Aligns items along the cross axis.
+   Values:
+   • flex-start
+   • center
+   • flex-end
+   • stretch
+
+3. flex-wrap
+   Controls wrapping of items.
+   Values:
+   • nowrap
+   • wrap
+   • wrap-reverse
+
+4. align-content : centre/flex-start/flex-end  
+   Controls spacing between wrapped rows/columns.
+
+
+5. flex-flow: flex_direction flex-wrap     here we can give 2 properties at once
+
+6. gap:30px      gap between each div        
+7. can further give row-gap and column gap    .... 
+dono saath me likho    gap: row-gap column-gap;    gap:30px 20px;
+
+Flex Item Properties:
+
+
+1. order: 5;   then it will be 5th iv no matter the html order    default order=0
+
+1. align-self : flex-start/flex-end/centre on cross axis
+   Aligns an individual item.       the priority will be there for align-self over align-content
+
+2. flex-grow
+   Defines how much an item grows. or how much space it will take by default each have 1 flex-grow.....if any class have it 2 then it will take double space than other
+
+3. flex-shrink
+   Defines how much an item shrinks.  opp to flex-grow   but not works when there is wrap used 
+
+4. flex-basis
+   Sets initial size of an item.
+
+5. flex
+   Shortcut for grow, shrink and basis.
+
+Important:
+• Row Direction:
+  justify-content → Horizontal Alignment
+  align-items → Vertical Alignment
+
+• Column Direction:
+  justify-content → Vertical Alignment
+  align-items → Horizontal Alignment
+
+Advantages:
+• Easy alignment of elements.
+• Responsive layouts.
+• Easy horizontal and vertical centering.
+• Less code than older layout methods.
+
+Flexbox vs Grid:
+• Flexbox → One-dimensional layout.
+• Grid → Two-dimensional layout.
+
+Most Common Code:
+.container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+to place a div exactly in the centre of other....use flexbox ....properties used justify-content and align-items
+
+
+
+
+Media Queries are used to apply different CSS styles based on the device's screen size, resolution, or orientation.
+
+Syntax:
+@media (condition) {
+    selector {
+        property: value;
+    }
+}
+
+Example:
+@media (max-width: 768px) {        ....max-width mtlb 0 to 768px lightblue and baad me jo set hai woh nhi toh white
+    body {
+        background-color: lightblue;
+    }
+}
+
+
+min-width means min-width to further 
+can save for range
+@media (min-width:200px) ans (max-width:300px) {
+    selector {
+        property: value;
+    }
+}
+
+
+
+TRANSITION Property
+
+=========================
+CSS TRANSITIONS
+=========================
+
+• Used to smoothly change CSS properties.
+
+Syntax:
+transition: property duration timing-function delay;
+
+Properties:
+1. transition-property → Property to animate (width, color, etc.) or if we want to tansiltion on all prop just write all
+2. transition-duration → Time taken (2s, 500ms)
+3. transition-timing-function →
+   - ease (default)
+   - linear
+   - ease-in
+   - ease-out
+   - ease-in-out
+   - steps()    can give no of steps in which transition take place in bracket
+
+4. transition-delay → Delay before animation starts.
+
+Example:
+.box{
+    transition: width 2s ease;
+}
+
+.box:hover{
+    width:200px;
+}
+
+Important:
+• Usually used with :hover.
+• Only works on animatable properties.
+• 'all' animates all changing properties.
+
+Shorthand Order:
+Property → Duration → TimingFunction → Delay    transition: all 5s steps(3) 2s;
+
+
+
+----------------------------
+TRANSFORM
+----------------------------
+
+• Used to change an element's position, size, or rotation without affecting the document layout.
+
+Syntax:
+transform: value;
+
+Transform Functions:
+
+1. translate(x, y)
+   → Moves an element.
+   Example:
+   transform: translate(50px, 20px);  if translate(-20px) then move in diagonal towards left   and can do translateX( )
+  
+2. rotate(angle)                         can also rotate for  3d objects like    transform: rotateX/rotateY/rotateZ(45deg)
+   → Rotates an element.
+   Example:
+   transform: rotate(45deg);
+
+3. scale(x, y)
+   → Increases or decreases size.
+   Example:
+   transform: scale(1.5);    it means increased by 1.5x  on both x and y axis
+   scale(2,1);      here, 2 times increase along x axis and 1 times(same) along y axis
+
+4. skew(x-angle, y-angle)
+   → Tilts an element.
+   Example:
+   transform: skew(20deg);
+
+
+Multiple Transforms:
+transform: translate(50px) rotate(45deg) scale(1.2);
+
+
+-------------------------------------------
+.box{
+    transition: 0.5s;
+}
+
+.box:hover{
+    transform: scale(1.2) rotate(10deg);
+}
+----------------------------------------------
+
+translate() → Move
+rotate()    → Rotate
+scale()     → Resize
+skew()      → Tilt
+
+
+--------------------------------------
+ANIMATION
+--------------------------------------
+
+• Used to create continuous or custom animations.
+
+Syntax:
+
+@keyframes animationName{
+    from{ }
+    to{ }
+}
+
+
+
+1. animation-name
+   → Name of @keyframes.
+
+2. animation-duration
+   → Time taken for one cycle.
+   Example: 2s
+
+3. animation-timing-function
+   → Speed of animation.
+   Values:
+   ease
+   linear
+   ease-in
+   ease-out
+   ease-in-out
+
+4. animation-delay
+   → Delay before animation starts.
+
+5. animation-iteration-count
+   → Number of repetitions.
+   Example:
+   2
+   infinite
+
+6. animation-direction
+   Values:
+   normal
+   reverse
+   alternate
+   alternate-reverse
+
+------------------------------------
+
+Shorthand
+
+animation: name duration timing-function delay iteration-count direction;
+
+---------------------------------------------------
+
+@keyframes move{
+    from{
+        left:0;
+    }
+    to{
+        left:200px;
+    }
+}
+
+
+@keyframes animationName{
+    0%{}    from
+    50%{}   mid                                     we can add multiple mid
+    100%{}   to
+}
+
+.box{
+    position:relative;
+    animation: move 2s linear infinite;
+}
+
+--------------------------------------------------------
+
+
+Difference
+
+Transition:
+• Triggered by an event (e.g., :hover)
+• Two states only
+
+Animation:
+• Runs automatically
+• Can have multiple keyframes
+• Can repeat infinitely
+
+------------------------------------
+
+Interview Points
+
+• @keyframes defines animation.
+• animation-name links element to keyframes.
+• animation-duration is mandatory.
+• animation-iteration-count: infinite → runs forever.
+• animation-direction controls animation direction.
